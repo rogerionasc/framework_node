@@ -271,16 +271,20 @@ const Fornecedor = () => {
   return (
     <div className="fornecedor-container">
       <div className="fornecedor-header">
-        <h1 className="fornecedor-title">{data?.title || 'Gestão de Fornecedores'}</h1>
-        <p className="fornecedor-subtitle">
-          {data?.subtitle || 'Gerencie seus fornecedores de forma eficiente'}
-        </p>
-        <div className="fornecedor-actions">
+        <div className="header-content">
+          <h1 className="fornecedor-title">{data?.title || 'Gestão de Fornecedores'}</h1>
+          <p className="fornecedor-subtitle">
+            {data?.subtitle || 'Gerencie seus fornecedores de forma eficiente'}
+          </p>
+        </div>
+        
+        <div className="header-actions">
           <button 
-            className="action-btn primary" 
+            className="btn btn-primary" 
             onClick={() => setShowModal(true)}
           >
-            + Novo Fornecedor
+            <span className="btn-icon">+</span>
+            Novo Fornecedor
           </button>
         </div>
       </div>

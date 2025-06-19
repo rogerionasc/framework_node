@@ -6,11 +6,14 @@
 }
 
 .fornecedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 30px;
+  padding: 2rem;
   border-radius: 12px;
-  margin-bottom: 30px;
+  color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -26,27 +29,38 @@
   opacity: 0.9;
 }
 
-.fornecedor-actions {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+.header-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
-.action-btn {
+.header-content .fornecedor-subtitle {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.header-actions .btn {
   background: rgba(255, 255, 255, 0.2);
-  color: white;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  padding: 12px 24px;
+  color: white;
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
-.action-btn:hover {
+.header-actions .btn:hover {
   background: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
+}
+
+.btn-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .fornecedor-list {
