@@ -47,7 +47,7 @@ framework_node/
 
 1. **Clone o repositório:**
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/rogerionasc/framework_node.git
 cd framework_node
 ```
 
