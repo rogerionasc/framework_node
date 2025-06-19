@@ -356,42 +356,58 @@ const Fornecedor = () => {
                 />
               </div>
               
-              <div className="form-group">
-                <label htmlFor="cnpj">CNPJ *</label>
-                <input
-                  type="text"
-                  id="cnpj"
-                  name="cnpj"
-                  value={formData.cnpj}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="00.000.000/0000-00"
-                />
+              <div className="form-row">
+                <div className="form-group form-group-half">
+                  <label htmlFor="cnpj">CNPJ *</label>
+                  <input
+                    type="text"
+                    id="cnpj"
+                    name="cnpj"
+                    value={formData.cnpj}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="00.000.000/0000-00"
+                  />
+                </div>
+                
+                <div className="form-group form-group-half">
+                  <label htmlFor="telefone">Telefone</label>
+                  <input
+                    type="text"
+                    id="telefone"
+                    name="telefone"
+                    value={formData.telefone}
+                    onChange={handleInputChange}
+                    placeholder="(00) 00000-0000"
+                  />
+                </div>
               </div>
               
-              <div className="form-group">
-                <label htmlFor="email">Email *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="email@exemplo.com"
-                />
-              </div>
-              
-              <div className="form-group">
-                <label htmlFor="telefone">Telefone</label>
-                <input
-                  type="text"
-                  id="telefone"
-                  name="telefone"
-                  value={formData.telefone}
-                  onChange={handleInputChange}
-                  placeholder="(00) 00000-0000"
-                />
+              <div className="form-row">
+                <div className="form-group form-group-half">
+                  <label htmlFor="email">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="email@exemplo.com"
+                  />
+                </div>
+                
+                <div className="form-group form-group-half">
+                  <label htmlFor="contato_principal">Contato Principal</label>
+                  <input
+                    type="text"
+                    id="contato_principal"
+                    name="contato_principal"
+                    value={formData.contato_principal}
+                    onChange={handleInputChange}
+                    placeholder="Nome do contato principal"
+                  />
+                </div>
               </div>
               
               <div className="form-group">
@@ -404,18 +420,6 @@ const Fornecedor = () => {
                   placeholder="Endereço completo"
                   rows="3"
                 ></textarea>
-              </div>
-              
-              <div className="form-group">
-                <label htmlFor="contato_principal">Contato Principal</label>
-                <input
-                  type="text"
-                  id="contato_principal"
-                  name="contato_principal"
-                  value={formData.contato_principal}
-                  onChange={handleInputChange}
-                  placeholder="Nome do contato principal"
-                />
               </div>
               
               {/* Seção de Produtos */}
