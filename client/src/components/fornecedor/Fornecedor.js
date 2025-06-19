@@ -285,12 +285,12 @@ const Fornecedor = () => {
             className="btn btn-secondary" 
             onClick={() => navigate('/')}
           >
-            <span className="btn-icon">←</span>
-            Voltar à Home
+            <span className="btn-icon">🏠</span>
           </button>
           <button 
             className="btn btn-primary" 
             onClick={() => setShowModal(true)}
+            style={{marginLeft: '15px'}}
           >
             <span className="btn-icon">+</span>
             Novo Fornecedor

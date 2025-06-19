@@ -176,12 +176,12 @@ const Produto = ({ data }) => {
             className="btn btn-secondary" 
             onClick={() => navigate('/')}
           >
-            <span className="btn-icon">←</span>
-            Voltar à Home
+            <span className="btn-icon">🏠</span>
           </button>
           <button 
             className="btn btn-primary"
             onClick={handleNewProduto}
+            style={{marginLeft: '15px'}}
           >
             <span className="btn-icon">+</span>
             Novo Produto
