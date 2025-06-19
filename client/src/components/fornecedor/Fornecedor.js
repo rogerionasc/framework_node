@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Fornecedor.css';
 
 const Fornecedor = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -279,6 +281,13 @@ const Fornecedor = () => {
         </div>
         
         <div className="header-actions">
+          <button 
+            className="btn btn-secondary" 
+            onClick={() => navigate('/')}
+          >
+            <span className="btn-icon">←</span>
+            Voltar à Home
+          </button>
           <button 
             className="btn btn-primary" 
             onClick={() => setShowModal(true)}

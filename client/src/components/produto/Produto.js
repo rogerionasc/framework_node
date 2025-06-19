@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Produto.css';
 
 const Produto = ({ data }) => {
+  const navigate = useNavigate();
   const [produtos, setProdutos] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -170,6 +172,13 @@ const Produto = ({ data }) => {
         </div>
         
         <div className="header-actions">
+          <button 
+            className="btn btn-secondary" 
+            onClick={() => navigate('/')}
+          >
+            <span className="btn-icon">←</span>
+            Voltar à Home
+          </button>
           <button 
             className="btn btn-primary"
             onClick={handleNewProduto}
