@@ -299,34 +299,28 @@ const Fornecedor = () => {
             <div className="table-cell">Ações</div>
           </div>
           
-          {data?.fornecedores && data.fornecedores.length > 0 ? (
-            data.fornecedores.map((fornecedor) => (
-              <div key={fornecedor.id} className="table-row">
-                <div className="table-cell">{fornecedor.nome}</div>
-                <div className="table-cell">{fornecedor.cnpj}</div>
-                <div className="table-cell">{fornecedor.email}</div>
-                <div className="table-cell">{fornecedor.telefone}</div>
-                <div className="table-cell">
-                  <button 
-                    className="edit-btn"
-                    onClick={() => handleEdit(fornecedor)}
-                  >
-                    Editar
-                  </button>
-                  <button 
-                    className="delete-btn"
-                    onClick={() => handleDelete(fornecedor.id)}
-                  >
-                    Excluir
-                  </button>
-                </div>
+          {data?.fornecedores?.map((fornecedor) => (
+            <div key={fornecedor.id} className="table-row">
+              <div className="table-cell">{fornecedor.nome}</div>
+              <div className="table-cell">{fornecedor.cnpj}</div>
+              <div className="table-cell">{fornecedor.email}</div>
+              <div className="table-cell">{fornecedor.telefone}</div>
+              <div className="table-cell">
+                <button 
+                  className="edit-btn"
+                  onClick={() => handleEdit(fornecedor)}
+                >
+                  Editar
+                </button>
+                <button 
+                  className="delete-btn"
+                  onClick={() => handleDelete(fornecedor.id)}
+                >
+                  Excluir
+                </button>
               </div>
-            ))
-          ) : (
-            <div className="no-data">
-              <p>Nenhum fornecedor cadastrado ainda.</p>
             </div>
-          )}
+          ))}
         </div>
       </div>
       
