@@ -124,8 +124,9 @@
   background: #667eea;
   color: white;
   font-weight: 600;
-  padding: 1rem;
+  padding: 12px 1.25rem;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 45px;
 }
 
 .table-header .table-cell:last-child {
