@@ -209,30 +209,38 @@ const Produto = ({ data }) => {
             <div className="table-cell">Ações</div>
           </div>
           
-          {produtos?.map((produto) => (
-            <div key={produto.id} className="table-row">
-              <div className="table-cell">{produto.nome}</div>
-              <div className="table-cell">{produto.codigo_barras || 'N/A'}</div>
-              <div className="table-cell">{produto.categoria || 'N/A'}</div>
-              <div className="table-cell">
-                {produto.data_validade ? new Date(produto.data_validade).toLocaleDateString('pt-BR') : 'N/A'}
+          {produtos && produtos.length > 0 ? (
+            produtos.map((produto) => (
+              <div key={produto.id} className="table-row">
+                <div className="table-cell">{produto.nome}</div>
+                <div className="table-cell">{produto.codigo_barras || 'N/A'}</div>
+                <div className="table-cell">{produto.categoria || 'N/A'}</div>
+                <div className="table-cell">
+                  {produto.data_validade ? new Date(produto.data_validade).toLocaleDateString('pt-BR') : 'N/A'}
+                </div>
+                <div className="table-cell">
+                  <button 
+                    className="edit-btn"
+                    onClick={() => handleEdit(produto)}
+                  >
+                    Editar
+                  </button>
+                  <button 
+                    className="delete-btn"
+                    onClick={() => handleDelete(produto.id)}
+                  >
+                    Excluir
+                  </button>
+                </div>
               </div>
-              <div className="table-cell">
-                <button 
-                  className="edit-btn"
-                  onClick={() => handleEdit(produto)}
-                >
-                  Editar
-                </button>
-                <button 
-                  className="delete-btn"
-                  onClick={() => handleDelete(produto.id)}
-                >
-                  Excluir
-                </button>
-              </div>
+            ))
+          ) : (
+            <div className="empty-state">
+              <div className="empty-icon">📦</div>
+              <div className="empty-title">Nenhum produto cadastrado</div>
+              <div className="empty-message">Clique em "Novo Produto" para adicionar o primeiro registro</div>
             </div>
-          ))}
+          )}
         </div>
       </div>
       

@@ -303,28 +303,36 @@ const Fornecedor = () => {
             <div className="table-cell">Ações</div>
           </div>
           
-          {data?.fornecedores?.map((fornecedor) => (
-            <div key={fornecedor.id} className="table-row">
-              <div className="table-cell">{fornecedor.nome}</div>
-              <div className="table-cell">{fornecedor.cnpj}</div>
-              <div className="table-cell">{fornecedor.email}</div>
-              <div className="table-cell">{fornecedor.telefone}</div>
-              <div className="table-cell">
-                <button 
-                  className="edit-btn"
-                  onClick={() => handleEdit(fornecedor)}
-                >
-                  Editar
-                </button>
-                <button 
-                  className="delete-btn"
-                  onClick={() => handleDelete(fornecedor.id)}
-                >
-                  Excluir
-                </button>
+          {data?.fornecedores && data.fornecedores.length > 0 ? (
+            data.fornecedores.map((fornecedor) => (
+              <div key={fornecedor.id} className="table-row">
+                <div className="table-cell">{fornecedor.nome}</div>
+                <div className="table-cell">{fornecedor.cnpj}</div>
+                <div className="table-cell">{fornecedor.email}</div>
+                <div className="table-cell">{fornecedor.telefone}</div>
+                <div className="table-cell">
+                  <button 
+                    className="edit-btn"
+                    onClick={() => handleEdit(fornecedor)}
+                  >
+                    Editar
+                  </button>
+                  <button 
+                    className="delete-btn"
+                    onClick={() => handleDelete(fornecedor.id)}
+                  >
+                    Excluir
+                  </button>
+                </div>
               </div>
+            ))
+          ) : (
+            <div className="empty-state">
+              <div className="empty-icon">📋</div>
+              <div className="empty-title">Nenhum fornecedor cadastrado</div>
+              <div className="empty-message">Clique em "Novo Fornecedor" para adicionar o primeiro registro</div>
             </div>
-          ))}
+          )}
         </div>
       </div>
       
