@@ -70,6 +70,7 @@ function startServer(port) {
       console.log(`🚀 Servidor rodando na porta ${port}`);
       console.log(`📱 Frontend: http://localhost:3000`);
       console.log(`🔗 API: http://localhost:${port}/api`);
+      console.log(`⏳ Carregando ...`);
       resolve(server);
     });
     
