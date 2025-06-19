@@ -41,8 +41,7 @@ const migrations = {
       descricao: 'TEXT',
       codigo_barras: 'TEXT UNIQUE',
       categoria: 'TEXT',
-      data_validade: 'DATE',
-      imagem_produto: 'TEXT',
+      data_validade: 'DATE'
     }
   },
 

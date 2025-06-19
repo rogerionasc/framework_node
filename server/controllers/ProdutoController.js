@@ -24,7 +24,7 @@ class Controller {
           codigo_barras: produto.codigo_barras,
           categoria: produto.categoria,
           data_validade: produto.data_validade,
-          imagem_produto: produto.imagem_produto,
+
         }));
   
         res.json({
@@ -83,7 +83,7 @@ class Controller {
           codigo_barras: produto.codigo_barras,
           categoria: produto.categoria,
           data_validade: produto.data_validade,
-          imagem_produto: produto.imagem_produto,
+
           data_criacao: produto.data_criacao
         }
       });
@@ -100,7 +100,7 @@ class Controller {
   // Criar novo
   async store(req, res) {
     try {
-      const { nome, descricao, codigo_barras, categoria, data_validade, imagem_produto } = req.body;
+      const { nome, descricao, codigo_barras, categoria, data_validade } = req.body;
 
       // Validação básica
       if (!nome) {
@@ -133,8 +133,8 @@ class Controller {
       // Inserir produto
       const result = await new Promise((resolve, reject) => {
         db.db.run(
-          'INSERT INTO produto (nome, descricao, codigo_barras, categoria, data_validade, imagem_produto) VALUES (?, ?, ?, ?, ?, ?)',
-          [nome, descricao, codigo_barras, categoria, data_validade, imagem_produto],
+          'INSERT INTO produto (nome, descricao, codigo_barras, categoria, data_validade) VALUES (?, ?, ?, ?, ?)',
+          [nome, descricao, codigo_barras, categoria, data_validade],
           function(err) {
             if (err) {
               reject(err);
@@ -155,7 +155,7 @@ class Controller {
           codigo_barras,
           categoria,
           data_validade,
-          imagem_produto
+
         }
       });
     } catch (error) {
@@ -172,7 +172,7 @@ class Controller {
   async update(req, res) {
     try {
       const { id } = req.params;
-      const { nome, descricao, codigo_barras, categoria, data_validade, imagem_produto } = req.body;
+      const { nome, descricao, codigo_barras, categoria, data_validade } = req.body;
 
       // Validação básica
       if (!nome) {
@@ -223,8 +223,8 @@ class Controller {
       // Atualizar produto
       await new Promise((resolve, reject) => {
         db.db.run(
-          'UPDATE produto SET nome = ?, descricao = ?, codigo_barras = ?, categoria = ?, data_validade = ?, imagem_produto = ? WHERE id = ?',
-          [nome, descricao, codigo_barras, categoria, data_validade, imagem_produto, id],
+          'UPDATE produto SET nome = ?, descricao = ?, codigo_barras = ?, categoria = ?, data_validade = ? WHERE id = ?',
+          [nome, descricao, codigo_barras, categoria, data_validade, id],
           function(err) {
             if (err) {
               reject(err);

@@ -14,7 +14,7 @@ class FornecedorProdutoController {
           p.codigo_barras,
           p.categoria,
           p.data_validade,
-          p.imagem_produto,
+
           fp.preco_fornecedor,
           fp.data_vinculo,
           fp.ativo as vinculo_ativo

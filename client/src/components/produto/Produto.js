@@ -13,7 +13,7 @@ const Produto = ({ data }) => {
     codigo_barras: '',
     categoria: '',
     data_validade: '',
-    imagem_produto: ''
+
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -98,7 +98,7 @@ const Produto = ({ data }) => {
       codigo_barras: produto.codigo_barras || '',
       categoria: produto.categoria || '',
       data_validade: produto.data_validade || '',
-      imagem_produto: produto.imagem_produto || ''
+
     });
     setShowModal(true);
   };
@@ -142,7 +142,7 @@ const Produto = ({ data }) => {
       codigo_barras: '',
       categoria: '',
       data_validade: '',
-      imagem_produto: ''
+
     });
     setShowModal(true);
   };
@@ -157,7 +157,7 @@ const Produto = ({ data }) => {
       codigo_barras: '',
       categoria: '',
       data_validade: '',
-      imagem_produto: ''
+
     });
   };
 
@@ -312,17 +312,7 @@ const Produto = ({ data }) => {
                 />
               </div>
               
-              <div className="form-group">
-                <label htmlFor="imagem_produto">URL da Imagem</label>
-                <input
-                  type="url"
-                  id="imagem_produto"
-                  name="imagem_produto"
-                  value={formData.imagem_produto}
-                  onChange={handleInputChange}
-                  placeholder="Digite a URL da imagem"
-                />
-              </div>
+
               
               <div className="form-actions">
                 <button 
