@@ -285,7 +285,7 @@ const Fornecedor = () => {
             className="btn btn-secondary" 
             onClick={() => navigate('/')}
           >
-            <span className="btn-icon">🏠</span>
+            <span className="btn-icon"><i className="fas fa-home"></i></span>
           </button>
           <button 
             className="btn btn-primary" 
