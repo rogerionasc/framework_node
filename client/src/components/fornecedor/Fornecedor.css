@@ -54,6 +54,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  min-height: 500px;
 }
 
 .list-header {
@@ -72,6 +73,7 @@
   display: grid;
   grid-template-columns: 2fr 1.5fr 2fr 1.5fr 1.5fr;
   gap: 0;
+  min-height: 400px;
 }
 
 .table-header {
@@ -85,12 +87,13 @@
 
 
 .table-cell {
-  padding: 15px 20px;
+  padding: 20px 25px;
   display: flex;
   align-items: center;
   font-size: 0.9rem;
   border-right: 1px solid #e9ecef;
   border-bottom: 1px solid #e9ecef;
+  min-height: 60px;
 }
 
 .table-cell:last-child {

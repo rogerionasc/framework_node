@@ -93,6 +93,7 @@
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  min-height: 500px;
 }
 
 .list-header {
@@ -112,6 +113,7 @@
   display: grid;
   grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr;
   gap: 0;
+  min-height: 400px;
 }
 
 .table-header {
@@ -139,12 +141,13 @@
 }
 
 .table-cell {
-  padding: 1rem;
+  padding: 1.25rem;
   border-right: 1px solid #dee2e6;
   border-bottom: 1px solid #dee2e6;
   display: flex;
   align-items: center;
   word-break: break-word;
+  min-height: 60px;
 }
 
 .table-cell:last-child {
