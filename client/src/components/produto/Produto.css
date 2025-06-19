@@ -52,6 +52,9 @@
 /* No data message */
 .no-data {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .no-data-cell {
@@ -59,7 +62,12 @@
   text-align: center;
   color: #6c757d;
   font-style: italic;
-  padding: 2rem;
+  font-size: 1.1rem;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .btn-icon {
