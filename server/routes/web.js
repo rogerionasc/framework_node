@@ -7,20 +7,6 @@ const { routes, registerRoutes, listRoutes, addRoute, removeRoute, listWebRoutes
 
 // ===== DEFINA SUAS ROTAS AQUI =====
 
-// Rota principal - Tela de boas vindas
-routes['GET /'] = {
-  controller: 'Controller',
-  method: 'index',
-  description: 'Tela de boas vindas'
-};
-
-// Rota fornecedor - Página
-routes['GET /fornecedor'] = {
-  controller: 'Controller',
-  method: 'fornecedor',
-  description: 'Página de fornecedores'
-};
-
 // API Fornecedores - CRUD
 routes['GET /api/fornecedores'] = {
   controller: 'FornecedorController',
@@ -52,12 +38,6 @@ routes['DELETE /api/fornecedores/:id'] = {
   description: 'Deletar fornecedor'
 };
 
-// Rota produto - Página
-routes['GET /produto'] = {
-  controller: 'Controller',
-  method: 'produto',
-  description: 'Página de produtos'
-};
 
 // API Produtos - CRUD
 routes['GET /api/produtos'] = {
