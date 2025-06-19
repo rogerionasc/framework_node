@@ -334,7 +334,7 @@ const Produto = ({ data }) => {
               <div className="form-actions">
                 <button 
                   type="button" 
-                  className="btn btn-secondary"
+                  className="btn-cancel"
                   onClick={handleCloseModal}
                   disabled={loading}
                 >
@@ -342,7 +342,7 @@ const Produto = ({ data }) => {
                 </button>
                 <button 
                   type="submit" 
-                  className="btn btn-primary"
+                  className="btn-submit"
                   disabled={loading}
                 >
                   {loading ? 'Salvando...' : (editingProduto ? 'Atualizar' : 'Criar')}
