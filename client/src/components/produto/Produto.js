@@ -235,10 +235,10 @@ const Produto = ({ data }) => {
               </div>
             ))
           ) : (
-            <div className="empty-state">
-              <div className="empty-icon">📦</div>
-              <div className="empty-title">Nenhum produto cadastrado</div>
-              <div className="empty-message">Clique em "Novo Produto" para adicionar o primeiro registro</div>
+            <div className="table-row no-data">
+              <div className="table-cell no-data-cell" colSpan="5">
+                Nenhum registro encontrado
+              </div>
             </div>
           )}
         </div>

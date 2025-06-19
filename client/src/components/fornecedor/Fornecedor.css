@@ -108,6 +108,18 @@
   border-bottom: 1px solid #e9ecef;
 }
 
+.no-data {
+  text-align: center;
+}
+
+.no-data-cell {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 30px 15px;
+}
+
 .table-cell:last-child {
   border-right: none;
 }
@@ -255,39 +267,6 @@
 .form-group-half {
   flex: 1;
   margin-bottom: 0;
-}
-
-/* Estado vazio das tabelas */
-.empty-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
-  text-align: center;
-  color: #666;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
-.empty-icon {
-  font-size: 48px;
-  margin-bottom: 16px;
-  opacity: 0.6;
-}
-
-.empty-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-.empty-message {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.4;
 }
 
 .form-label {
