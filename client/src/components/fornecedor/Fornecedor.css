@@ -87,13 +87,12 @@
 
 
 .table-cell {
-  padding: 20px 25px;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   font-size: 0.9rem;
   border-right: 1px solid #e9ecef;
   border-bottom: 1px solid #e9ecef;
-  min-height: 60px;
 }
 
 .table-cell:last-child {
@@ -107,8 +106,6 @@
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.5px;
-  padding: 12px 25px;
-  min-height: 45px;
 }
 
 .table-row:hover .table-cell {
@@ -584,10 +581,16 @@
   text-align: center;
   color: #6c757d;
   font-style: italic;
-  padding: 20px;
+  padding: 60px 20px;
   background-color: #f8f9fa;
   border-radius: 8px;
   border: 1px dashed #dee2e6;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
 }
 
 .btn-primary {
